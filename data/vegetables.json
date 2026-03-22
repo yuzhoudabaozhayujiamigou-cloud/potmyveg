@@ -1,0 +1,552 @@
+[
+  {
+    "name": "Cherry Tomato",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 12,
+    "notes": "Needs support stake or cage",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Roma Tomato",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Bushy habit, needs basic staking",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Beefsteak Tomato",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 18,
+    "notes": "Provide sturdy cage or trellis",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Bell Pepper",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 10,
+    "pot_diameter_inches": 12,
+    "notes": "Stake tall varieties for support",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Hot Pepper",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Prefers hot days and full sun",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Cucumber",
+    "min_gallons": 5,
+    "optimal_gallons": 7,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Trellis to save space",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Zucchini",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 18,
+    "notes": "Provide plenty of space",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Lettuce",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Harvest outer leaves continuously",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Spinach",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Bolts quickly in heat",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Kale",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Frost improves flavor",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Carrots",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 10,
+    "notes": "Needs deep loose soil",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Radishes",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Harvest in about thirty days",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Beets",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 10,
+    "notes": "You can eat the greens too",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Onions",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Ensure good drainage",
+    "difficulty": "beginner",
+    "season": "fall"
+  },
+  {
+    "name": "Garlic",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Plant cloves in late fall",
+    "difficulty": "beginner",
+    "season": "fall"
+  },
+  {
+    "name": "Potatoes",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 18,
+    "notes": "Hilling required as plants grow",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Sweet Potatoes",
+    "min_gallons": 15,
+    "optimal_gallons": 20,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 20,
+    "notes": "Needs long hot growing season",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Bush Beans",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 10,
+    "notes": "No trellis needed",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Pole Beans",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Requires tall stakes or trellis",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Peas",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Provide trellis for climbing",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Broccoli",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Sensitive to high heat",
+    "difficulty": "intermediate",
+    "season": "fall"
+  },
+  {
+    "name": "Cauliflower",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Tie leaves to blanch curds",
+    "difficulty": "advanced",
+    "season": "fall"
+  },
+  {
+    "name": "Cabbage",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Watch out for cabbage worms",
+    "difficulty": "intermediate",
+    "season": "fall"
+  },
+  {
+    "name": "Eggplant",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Loves heat and full sun",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Summer Squash",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 18,
+    "notes": "Heavy feeder needs rich soil",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Winter Squash",
+    "min_gallons": 15,
+    "optimal_gallons": 20,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 24,
+    "notes": "Vines require extensive space",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Pumpkin",
+    "min_gallons": 20,
+    "optimal_gallons": 30,
+    "min_depth_inches": 20,
+    "pot_diameter_inches": 24,
+    "notes": "Needs massive pots and space",
+    "difficulty": "advanced",
+    "season": "summer"
+  },
+  {
+    "name": "Corn",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 18,
+    "notes": "Plant in blocks for pollination",
+    "difficulty": "advanced",
+    "season": "summer"
+  },
+  {
+    "name": "Basil",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Pinch flowers to prolong harvest",
+    "difficulty": "beginner",
+    "season": "summer"
+  },
+  {
+    "name": "Parsley",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Slow to germinate from seed",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Cilantro",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Bolts quickly in the heat",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Mint",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Contains invasive spreading roots",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Rosemary",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 10,
+    "notes": "Requires excellent drainage and sun",
+    "difficulty": "intermediate",
+    "season": "year-round"
+  },
+  {
+    "name": "Thyme",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Drought tolerant once established",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Oregano",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Let soil dry between watering",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Chives",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Divide clumps every few years",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Strawberries",
+    "min_gallons": 1,
+    "optimal_gallons": 3,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 10,
+    "notes": "Keep crowns above soil level",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Green Onions",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Can regrow from kitchen scraps",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Leeks",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 10,
+    "pot_diameter_inches": 12,
+    "notes": "Mound soil to blanch stalks",
+    "difficulty": "intermediate",
+    "season": "fall"
+  },
+  {
+    "name": "Brussels Sprouts",
+    "min_gallons": 7,
+    "optimal_gallons": 10,
+    "min_depth_inches": 14,
+    "pot_diameter_inches": 16,
+    "notes": "Require long cool growing season",
+    "difficulty": "advanced",
+    "season": "fall"
+  },
+  {
+    "name": "Artichoke",
+    "min_gallons": 15,
+    "optimal_gallons": 20,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 24,
+    "notes": "Protect from harsh winter cold",
+    "difficulty": "advanced",
+    "season": "spring"
+  },
+  {
+    "name": "Asparagus",
+    "min_gallons": 15,
+    "optimal_gallons": 20,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 24,
+    "notes": "Takes several years to mature",
+    "difficulty": "advanced",
+    "season": "spring"
+  },
+  {
+    "name": "Swiss Chard",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Tolerates partial shade well",
+    "difficulty": "beginner",
+    "season": "year-round"
+  },
+  {
+    "name": "Arugula",
+    "min_gallons": 1,
+    "optimal_gallons": 2,
+    "min_depth_inches": 6,
+    "pot_diameter_inches": 8,
+    "notes": "Spicy leaves best in cool weather",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Bok Choy",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 10,
+    "notes": "Harvest before hot weather arrives",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Celery",
+    "min_gallons": 5,
+    "optimal_gallons": 7,
+    "min_depth_inches": 10,
+    "pot_diameter_inches": 12,
+    "notes": "Needs constant moisture to thrive",
+    "difficulty": "advanced",
+    "season": "fall"
+  },
+  {
+    "name": "Fennel",
+    "min_gallons": 5,
+    "optimal_gallons": 7,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Do not plant near dill",
+    "difficulty": "intermediate",
+    "season": "fall"
+  },
+  {
+    "name": "Okra",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Thrives in extreme summer heat",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Mustard Greens",
+    "min_gallons": 2,
+    "optimal_gallons": 3,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 10,
+    "notes": "Fast growing cool season crop",
+    "difficulty": "beginner",
+    "season": "spring"
+  },
+  {
+    "name": "Turnips",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Both greens and roots edible",
+    "difficulty": "beginner",
+    "season": "fall"
+  },
+  {
+    "name": "Kohlrabi",
+    "min_gallons": 3,
+    "optimal_gallons": 5,
+    "min_depth_inches": 8,
+    "pot_diameter_inches": 12,
+    "notes": "Harvest when bulbs are small",
+    "difficulty": "intermediate",
+    "season": "spring"
+  },
+  {
+    "name": "Parsnips",
+    "min_gallons": 5,
+    "optimal_gallons": 7,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 14,
+    "notes": "Needs extremely deep loose soil",
+    "difficulty": "intermediate",
+    "season": "spring"
+  },
+  {
+    "name": "Ginger",
+    "min_gallons": 5,
+    "optimal_gallons": 10,
+    "min_depth_inches": 12,
+    "pot_diameter_inches": 14,
+    "notes": "Needs warm humid conditions",
+    "difficulty": "intermediate",
+    "season": "summer"
+  },
+  {
+    "name": "Watermelon",
+    "min_gallons": 15,
+    "optimal_gallons": 20,
+    "min_depth_inches": 18,
+    "pot_diameter_inches": 24,
+    "notes": "Requires heavy watering and fertilizer",
+    "difficulty": "advanced",
+    "season": "summer"
+  },
+  {
+    "name": "Cantaloupe",
+    "min_gallons": 10,
+    "optimal_gallons": 15,
+    "min_depth_inches": 16,
+    "pot_diameter_inches": 18,
+    "notes": "Support fruit if using trellis",
+    "difficulty": "intermediate",
+    "season": "summer"
+  }
+]
