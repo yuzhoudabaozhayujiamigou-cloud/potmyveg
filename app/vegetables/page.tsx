@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { slugifyVegetable, vegetables } from "@/lib/vegetables";
+import { vegetables } from "@/lib/vegetables";
 
 function toLabel(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function nameToSlug(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 }
 
 export const metadata: Metadata = {
@@ -27,7 +31,7 @@ export default function VegetablesPage() {
           {vegetables.map((vegetable) => (
             <Link
               key={vegetable.name}
-              href={`/vegetables/${slugifyVegetable(vegetable.name)}`}
+              href={`/vegetables/${nameToSlug(vegetable.name)}`}
               className="rounded-xl border border-green-200 bg-white p-4 shadow-sm transition hover:border-green-300 hover:shadow"
             >
               <h2 className="text-xl font-semibold text-green-900">
