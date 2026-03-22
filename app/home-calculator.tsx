@@ -40,6 +40,13 @@ export default function HomeCalculator() {
       ]
     : [];
 
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Escape") {
+      setOpen(false);
+      inputRef.current?.blur();
+    }
+  }
+
   return (
     <div className="flex flex-1 flex-col bg-green-50">
       <main className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
@@ -57,18 +64,37 @@ export default function HomeCalculator() {
 
           {/* Custom dropdown */}
           <div className="relative">
-            <input
-              ref={inputRef}
-              id="vegetable-search"
-              type="text"
-              value={query}
-              onChange={(e) => { setQuery(e.target.value); setOpen(true); setSelected(null); }}
-              onFocus={() => setOpen(true)}
-              onBlur={() => setTimeout(() => setOpen(false), 150)}
-              placeholder="Type to search vegetables..."
-              className="w-full rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-green-900 placeholder-green-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
-              autoComplete="off"
-            />
+            <div className="relative">
+              <input
+                ref={inputRef}
+                id="vegetable-search"
+                type="text"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setSelected(null);
+                  setOpen(true);
+                }}
+                onFocus={() => setOpen(true)}
+                onKeyDown={handleKeyDown}
+                onBlur={() => setTimeout(() => setOpen(false), 150)}
+                placeholder="Type to search vegetables..."
+                className="w-full rounded-xl border border-green-300 bg-green-50 px-4 py-3 pr-10 text-green-900 placeholder-green-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+                autoComplete="off"
+              />
+              <button
+                type="button"
+                aria-label={open ? "Close vegetable list" : "Open vegetable list"}
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  setOpen((v) => !v);
+                  if (!open) inputRef.current?.focus();
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md px-2 py-1 text-green-800 hover:bg-green-100"
+              >
+                {open ? "▲" : "▼"}
+              </button>
+            </div>
             {open && filtered.length > 0 && (
               <ul className="absolute left-0 top-full z-50 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-green-200 bg-white shadow-lg">
                 {filtered.map((veg) => (
