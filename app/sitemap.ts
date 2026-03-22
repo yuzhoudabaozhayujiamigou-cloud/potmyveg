@@ -6,7 +6,7 @@ function nameToSlug(name: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://potmyveg.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://potmyveg.vercel.app';
 
   const vegPages = (vegetables as { name: string }[]).map((v) => ({
     url: `${baseUrl}/vegetables/${nameToSlug(v.name)}`,
