@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { type Vegetable, vegetables } from "@/lib/vegetables";
 
 function toLabel(value: string): string {
@@ -10,49 +10,31 @@ function toLabel(value: string): string {
 
 export default function HomeCalculator() {
   const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState<Vegetable | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const selectedVegetable = useMemo<Vegetable | null>(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    if (!normalizedQuery) {
-      return null;
-    }
-    return (
-      vegetables.find(
-        (vegetable) => vegetable.name.toLowerCase() === normalizedQuery,
-      ) ?? null
-    );
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return vegetables;
+    return vegetables.filter((v) => v.name.toLowerCase().includes(q));
   }, [query]);
 
-  const resultCards = selectedVegetable
+  function handleSelect(veg: Vegetable) {
+    setSelected(veg);
+    setQuery(veg.name);
+    setOpen(false);
+  }
+
+  const resultCards = selected
     ? [
-        {
-          label: "Minimum Container Volume",
-          value: `${selectedVegetable.min_gallons} gallons`,
-        },
-        {
-          label: "Optimal Container Volume",
-          value: `${selectedVegetable.optimal_gallons} gallons`,
-        },
-        {
-          label: "Minimum Soil Depth",
-          value: `${selectedVegetable.min_depth_inches} inches`,
-        },
-        {
-          label: "Recommended Pot Diameter",
-          value: `${selectedVegetable.pot_diameter_inches} inches`,
-        },
-        {
-          label: "Difficulty",
-          value: toLabel(selectedVegetable.difficulty),
-        },
-        {
-          label: "Best Season",
-          value: toLabel(selectedVegetable.season),
-        },
-        {
-          label: "Notes",
-          value: selectedVegetable.notes,
-        },
+        { label: "Minimum Container Volume", value: `${selected.min_gallons} gallons` },
+        { label: "Optimal Container Volume", value: `${selected.optimal_gallons} gallons` },
+        { label: "Minimum Soil Depth", value: `${selected.min_depth_inches} inches` },
+        { label: "Recommended Pot Diameter", value: `${selected.pot_diameter_inches} inches` },
+        { label: "Difficulty", value: toLabel(selected.difficulty) },
+        { label: "Best Season", value: toLabel(selected.season) },
+        { label: "Notes", value: selected.notes },
       ]
     : [];
 
@@ -63,43 +45,50 @@ export default function HomeCalculator() {
           PotMyVeg - Find the Right Pot Size for Your Vegetables
         </h1>
         <p className="mt-3 max-w-3xl text-base text-green-800 sm:text-lg">
-          Pick a vegetable to instantly see the container size, depth, diameter,
-          and growing tips for healthier harvests.
+          Pick a vegetable to instantly see the container size, depth, diameter, and growing tips for healthier harvests.
         </p>
 
         <section className="mt-8 rounded-2xl border border-green-200 bg-white p-5 shadow-sm sm:p-6">
-          <label
-            htmlFor="vegetable-search"
-            className="mb-2 block text-sm font-semibold text-green-900"
-          >
+          <label htmlFor="vegetable-search" className="mb-2 block text-sm font-semibold text-green-900">
             Search and select a vegetable
           </label>
-          <input
-            id="vegetable-search"
-            type="text"
-            list="vegetable-options"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Start typing, for example: Tomato, Pepper, Cucumber..."
-            className="w-full rounded-lg border border-green-300 bg-green-50 px-3 py-2 text-green-900 outline-none ring-green-200 transition focus:ring-2"
-          />
-          <datalist id="vegetable-options">
-            {vegetables.map((vegetable) => (
-              <option key={vegetable.name} value={vegetable.name} />
-            ))}
-          </datalist>
-          {!selectedVegetable && query.trim().length > 0 ? (
-            <p className="mt-2 text-sm text-green-700">
-              Select one of the 55 vegetables from the dropdown suggestions.
-            </p>
-          ) : null}
+
+          {/* Custom dropdown */}
+          <div className="relative">
+            <input
+              ref={inputRef}
+              id="vegetable-search"
+              type="text"
+              value={query}
+              onChange={(e) => { setQuery(e.target.value); setOpen(true); setSelected(null); }}
+              onFocus={() => setOpen(true)}
+              onBlur={() => setTimeout(() => setOpen(false), 150)}
+              placeholder="Type to search vegetables..."
+              className="w-full rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-green-900 placeholder-green-500 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200"
+              autoComplete="off"
+            />
+            {open && filtered.length > 0 && (
+              <ul className="absolute left-0 top-full z-50 mt-1 max-h-60 w-full overflow-y-auto rounded-xl border border-green-200 bg-white shadow-lg">
+                {filtered.map((veg) => (
+                  <li
+                    key={veg.name}
+                    onMouseDown={() => handleSelect(veg)}
+                    className="cursor-pointer px-4 py-2 text-green-900 hover:bg-green-50"
+                  >
+                    {veg.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </section>
 
-        <section className="mt-8">
-          {selectedVegetable ? (
+        {/* Results */}
+        <section className="mt-6">
+          {selected ? (
             <>
               <h2 className="text-2xl font-semibold text-green-900">
-                Container Guide: {selectedVegetable.name}
+                Container Guide: {selected.name}
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {resultCards.map((card) => (
@@ -107,12 +96,8 @@ export default function HomeCalculator() {
                     key={card.label}
                     className="rounded-xl border border-green-200 bg-white p-4 shadow-sm"
                   >
-                    <p className="text-sm font-medium text-green-700">
-                      {card.label}
-                    </p>
-                    <p className="mt-2 text-lg font-semibold text-green-900">
-                      {card.value}
-                    </p>
+                    <p className="text-sm font-medium text-green-700">{card.label}</p>
+                    <p className="mt-2 text-lg font-semibold text-green-900">{card.value}</p>
                   </article>
                 ))}
               </div>
@@ -126,7 +111,7 @@ export default function HomeCalculator() {
 
         <p className="mt-8 text-sm text-green-800">
           Looking for every crop in one place?{" "}
-          <Link href="/vegetables" className="font-semibold text-green-900">
+          <Link href="/vegetables" className="font-semibold text-green-900 underline">
             Browse all vegetables
           </Link>
           .
