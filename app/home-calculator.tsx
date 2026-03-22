@@ -16,8 +16,10 @@ export default function HomeCalculator() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return vegetables;
-    return vegetables.filter((v) => v.name.toLowerCase().includes(q));
+    const list = q
+      ? vegetables.filter((v) => v.name.toLowerCase().includes(q))
+      : [...vegetables].sort((a, b) => a.name.localeCompare(b.name));
+    return list;
   }, [query]);
 
   function handleSelect(veg: Vegetable) {
